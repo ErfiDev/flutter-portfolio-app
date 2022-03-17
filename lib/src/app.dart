@@ -13,7 +13,7 @@ class App extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           title: Center(
-            child: Text('Erfan'),
+            child: Text('My Resume Application'),
           ),
         ),
         body: SafeArea(
