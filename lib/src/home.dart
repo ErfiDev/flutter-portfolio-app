@@ -51,8 +51,8 @@ class Home extends StatelessWidget {
   }
 
   Widget _buttonsRow() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Wrap(
+      alignment: WrapAlignment.center,
       children: [
         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.github)),
         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.twitter)),
