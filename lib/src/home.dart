@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio_app/src/skill.dart';
+import 'package:portfolio_app/src/skills_card.dart';
 
 class Home extends StatelessWidget {
+  final List<Skill> skills = [
+    Skill('assets/javascript.png', 'javascript'),
+    Skill('assets/javascript.png', 'javascript'),
+    Skill('assets/javascript.png', 'javascript'),
+    Skill('assets/javascript.png', 'javascript'),
+  ];
+
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
@@ -27,7 +36,15 @@ class Home extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          _buttonsRow()
+          _buttonsRow(),
+          SizedBox(height: 10),
+          Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 25,
+            children: [
+              for (var skill in skills) returnCard(skill),
+            ],
+          )
         ],
       ),
     );
