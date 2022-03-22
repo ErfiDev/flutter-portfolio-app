@@ -44,7 +44,11 @@ class Home extends StatelessWidget {
             children: [
               for (var skill in skills) returnCard(skill),
             ],
-          )
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          _getResume(),
         ],
       ),
     );
@@ -59,6 +63,38 @@ class Home extends StatelessWidget {
         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.telegram)),
         IconButton(onPressed: () {}, icon: FaIcon(FontAwesomeIcons.linkedin)),
       ],
+    );
+  }
+
+  Widget _getResume() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 7, vertical: 12),
+      width: double.infinity,
+      color: Colors.grey[200],
+      child: Column(
+        children: [
+          Text(
+            'My Experience',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 10),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(width: double.infinity),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+              Text('Javascript fullstack developer'),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
